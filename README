@@ -1,0 +1,7 @@
+python 3.9.13
+1. pip install rasa
+2. rasa init
+
+rasa train
+rasa test
+rasa run actions

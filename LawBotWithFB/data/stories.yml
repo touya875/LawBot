@@ -1,0 +1,586 @@
+version: "3.1"
+
+stories:
+
+- story: Chào hỏi với tên và giới tính
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_name
+  - action: utter_greet_with_name
+
+- story: Chào hỏi rồi tạm biệt
+  steps:
+  - intent: give_name
+  - action: utter_greet_with_name
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Chào hỏi với tên và hỏi nội dung luật
+  steps:
+  - intent: give_name
+  - action: utter_greet_with_name
+  - intent: law_1
+  - action: action_law_1_db
+
+
+- story: Chào rồi hỏi
+  steps:
+  - intent: give_name
+  - action: utter_greet_with_name
+
+- story: Hỏi chức năng
+  steps:
+  - intent: ask_func
+  - action: act_func
+
+- story: Hỏi nội dung luật
+  steps:
+  - intent: ask_article
+  - action: utter_ask_article
+
+#- story: Hỏi thông tin liên lạc
+#  steps:
+#  - intent: ask_contact
+#  - action: act_contact
+
+- story: Cung cấp tin tức, vụ án
+  steps:
+  - intent: ask_news
+  - action: act_news
+
+- story: Hỏi về bộ dữ liệu
+  steps:
+  - intent: ask_guide
+  - action: act_guide
+
+#- story:  Tư vấn Tội cố ý gây thương tích hoặc gây tổn hại cho sức khoẻ của người khác
+#  steps:
+#  - intent: advise_harm_people
+#  - action: utter_advise_harm_people
+
+- story: Hỏi nội dung luật
+  steps:
+  - intent: law_1
+  - action: action_law_1_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_2
+  - action: action_law_2_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_3
+  - action: action_law_3_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_4
+  - action: action_law_4_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_5
+  - action: action_law_5_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_6
+  - action: action_law_6_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_7
+  - action: action_law_7_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_8
+  - action: action_law_8_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_9
+  - action: action_law_9_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_10
+  - action: action_law_10_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_11
+  - action: action_law_11_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_12
+  - action: action_law_12_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_13
+  - action: action_law_13_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_14
+  - action: action_law_14_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_15
+  - action: action_law_15_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_16
+  - action: action_law_16_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_17
+  - action: action_law_17_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_18
+  - action: action_law_18_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_19
+  - action: action_law_19_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_20
+  - action: action_law_20_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_21
+  - action: action_law_21_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_22
+  - action: action_law_22_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_23
+  - action: action_law_23_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_24
+  - action: action_law_24_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_25
+  - action: action_law_25_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_26
+  - action: action_law_26_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_27
+  - action: action_law_27_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_28
+  - action: action_law_28_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_29
+  - action: action_law_29_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_30
+  - action: action_law_30_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_31
+  - action: action_law_31_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_32
+  - action: action_law_32_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_33
+  - action: action_law_33_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_34
+  - action: action_law_34_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_35
+  - action: action_law_35_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_36
+  - action: action_law_36_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_37
+  - action: action_law_37_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_38
+  - action: action_law_38_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_39
+  - action: action_law_39_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_40
+  - action: action_law_40_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_41
+  - action: action_law_41_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_42
+  - action: action_law_42_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_43
+  - action: action_law_43_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_44
+  - action: action_law_44_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_45
+  - action: action_law_45_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_46
+  - action: action_law_46_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_47
+  - action: action_law_47_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_48
+  - action: action_law_48_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_49
+  - action: action_law_49_db
+
+- story: Tra cứu luật
+  steps:
+  - intent: law_50
+  - action: action_law_50_db
+
+###################################
+###Story tố tụng###
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt1
+  - action: action_tt_1_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt2
+  - action: action_tt_2_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt3
+  - action: action_tt_3_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt4
+  - action: action_tt_4_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt5
+  - action: action_tt_5_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt6
+  - action: action_tt_6_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt7
+  - action: action_tt_7_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt8
+  - action: action_tt_8_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt9
+  - action: action_tt_9_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt10
+  - action: action_tt_10_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt11
+  - action: action_tt_11_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt12
+  - action: action_tt_12_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt13
+  - action: action_tt_13_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt14
+  - action: action_tt_14_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt15
+  - action: action_tt_15_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt16
+  - action: action_tt_16_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt17
+  - action: action_tt_17_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt18
+  - action: action_tt_18_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt19
+  - action: action_tt_19_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt20
+  - action: action_tt_20_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt21
+  - action: action_tt_21_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt22
+  - action: action_tt_22_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt23
+  - action: action_tt_23_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt24
+  - action: action_tt_24_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt25
+  - action: action_tt_25_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt26
+  - action: action_tt_26_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt27
+  - action: action_tt_27_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt28
+  - action: action_tt_28_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt29
+  - action: action_tt_29_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt30
+  - action: action_tt_30_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt31
+  - action: action_tt_31_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt32
+  - action: action_tt_32_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt33
+  - action: action_tt_33_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt34
+  - action: action_tt_34_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt35
+  - action: action_tt_35_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt36
+  - action: action_tt_36_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt37
+  - action: action_tt_37_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt38
+  - action: action_tt_38_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt39
+  - action: action_tt_39_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt40
+  - action: action_tt_40_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt41
+  - action: action_tt_41_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt42
+  - action: action_tt_42_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt43
+  - action: action_tt_43_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt44
+  - action: action_tt_44_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt45
+  - action: action_tt_45_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt46
+  - action: action_tt_46_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt47
+  - action: action_tt_47_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt48
+  - action: action_tt_48_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt49
+  - action: action_tt_49_db
+
+- story: Tra cứu tố tụng
+  steps:
+  - intent: tt50
+  - action: action_tt_50_db
+##################################
+- story: Hỏi đáp hết các chức năng
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_name
+  - action: utter_greet_with_name
+  - intent: ask_func
+  - action: act_func
+  - intent: ask_article
+  - action: utter_ask_article
+  - intent: law_1
+  - action: action_law_1_db
+  - intent: tt1
+  - action: action_tt_1_db
+  - intent: ask_news
+  - action: act_news
+  - intent: ask_guide
+  - action: act_guide
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+

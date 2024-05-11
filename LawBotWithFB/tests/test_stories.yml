@@ -1,0 +1,73 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: Chào rồi tạm biệt
+  steps:
+  - user: |
+      chào
+    intent: greet
+  - action: utter_greet
+  - user: |
+      hẹn gặp lại
+    intent: goodbye
+  - action: utter_goodbye
+
+
+- story: Chào rồi hỏi cách xưng hô
+  steps:
+  - user: |
+      chào
+    intent: greet
+  - action: utter_greet
+  - user: |
+      anh là Đức
+    intent: give_name
+  - action: utter_greet_with_name
+
+
+- story: Người dùng tự xưng hô đầu tiên rồi tạm biệt
+  steps:
+  - user: |
+      Anh Tú
+    intent: give_name
+  - action: utter_greet_with_name
+  - user: |
+      hẹn gặp lại
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: Người dùng tự xưng hô đầu tiên rồi hỏi toàn bộ chức năng
+  steps:
+  - user: |
+      Anh là Văn Cao
+    intent: give_name
+  - action: utter_greet_with_name
+  - user: |
+      chức năng
+    intent: ask_func
+  - action: act_func
+  - user: |
+      article
+    intent: ask_article
+  - action: utter_ask_article
+  - user: |
+      nhiệm vụ của bộ luật hình sự
+    intent: law_1
+  - action: action_law_10_db
+  - user: |
+      phạm vi điều chỉnh
+    intent: tt1
+  - action: action_tt_10_db
+  - user: |
+      học ở đâu
+    intent: ask_guide
+  - action: act_guide
+  - user: |
+      vụ án
+    intent: ask_news
+  - action: act_news
+  - user: |
+      tạm biệt
+    intent: goodbye
+  - action: utter_goodbye

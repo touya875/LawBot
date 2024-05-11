@@ -1,0 +1,318 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_func
+  - ask_article
+#  - ask_contact
+  - ask_news
+  - ask_guide
+  - give_name
+  - law_1
+  - law_2
+  - law_3
+  - law_4
+  - law_5
+  - law_6
+  - law_7
+  - law_8
+  - law_9
+  - law_10
+  - law_11
+  - law_12
+  - law_13
+  - law_14
+  - law_15
+  - law_16
+  - law_17
+  - law_18
+  - law_19
+  - law_20
+  - law_21
+  - law_22
+  - law_23
+  - law_24
+  - law_25
+  - law_26
+  - law_27
+  - law_28
+  - law_29
+  - law_30
+  - law_31
+  - law_32
+  - law_33
+  - law_34
+  - law_35
+  - law_36
+  - law_37
+  - law_38
+  - law_39
+  - law_40
+  - law_41
+  - law_42
+  - law_43
+  - law_44
+  - law_45
+  - law_46
+  - law_47
+  - law_48
+  - law_49
+  - law_50
+  - tt1
+  - tt2
+  - tt3
+  - tt4
+  - tt5
+  - tt6
+  - tt7
+  - tt8
+  - tt9
+  - tt10
+  - tt11
+  - tt12
+  - tt13
+  - tt14
+  - tt15
+  - tt16
+  - tt17
+  - tt18
+  - tt19
+  - tt20
+  - tt21
+  - tt22
+  - tt23
+  - tt24
+  - tt25
+  - tt26
+  - tt27
+  - tt28
+  - tt29
+  - tt30
+  - tt31
+  - tt32
+  - tt33
+  - tt34
+  - tt35
+  - tt36
+  - tt37
+  - tt38
+  - tt39
+  - tt40
+  - tt41
+  - tt42
+  - tt43
+  - tt44
+  - tt45
+  - tt46
+  - tt47
+  - tt48
+  - tt49
+  - tt50
+
+entities:
+  - cust_name
+  - cust_sex
+
+slots:
+  cust_sex:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: cust_sex
+
+  cust_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: cust_name
+
+
+responses:
+
+  utter_greet:
+  - text: "Xin chào Quý khách, Quý khách vui lòng cho LawBot biết quý danh để tiện xưng hô ạ?"
+
+  utter_greet_with_name:
+  - text: "Xin chào {cust_sex} {cust_name}. LawBot có thể giúp gì được {cust_sex} {cust_name} ạ?"
+
+  utter_goodbye:
+  - text: "Cảm ơn {cust_sex} {cust_name} đã dành thời gian cho em. Hẹn gặp lại {cust_sex} {cust_name} lần sau!"
+  - text: "Kính chào tạm biệt và chúc {cust_sex} {cust_name} một ngày tốt lành!"
+
+  utter_ask_article:
+  - text: "Xin mời {cust_sex} {cust_name} nhập vào tiêu đề luật để tìm kiếm nội dung"
+
+
+
+#  utter_advise_harm_people:
+#  - text: "Định hướng giải quyết vụ việc là:\n
+#   Bạn có thể cùng gia đình mình đến bên phía người bị hại để xin lỗi công khai người ta.\n
+#   Việc tiếp theo là bạn nên đưa ra một khoản tiền, mức tiền mà người ta đã làm việc và chi phí thuốc men
+#   cho bên phía người bị hại, để được hưởng tình tiết giảm nhẹ theo Điều 46 Bộ Luật Hình sự: Đã khắc
+#   phục bổi thường hậu quả.\n
+#   Vận động gia đình người bị hại để yêu cầu người bị hại rút đơn tố cáo với cơ quan điều tra. Theo
+#   qui định tại Điều 105 Bộ luật tố tụng hình sự: Bên phía người bị hại rút đơn tố cáo và không
+#   yêu cầu khởi tố thì bên phía bạn có thể miễn chịu trách nhiệm hình sự theo Khoản 1 Điều 104 Bộ Luật
+#   Hình Sự"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - act_func
+#  - act_contact
+  - act_news
+  - act_guide
+  - action_law_1_db
+  - action_law_2_db
+  - action_law_3_db
+  - action_law_4_db
+  - action_law_5_db
+  - action_law_6_db
+  - action_law_7_db
+  - action_law_8_db
+  - action_law_9_db
+  - action_law_10_db
+  - action_law_11_db
+  - action_law_12_db
+  - action_law_13_db
+  - action_law_14_db
+  - action_law_15_db
+  - action_law_16_db
+  - action_law_17_db
+  - action_law_18_db
+  - action_law_19_db
+  - action_law_20_db
+  - action_law_21_db
+  - action_law_22_db
+  - action_law_23_db
+  - action_law_24_db
+  - action_law_25_db
+  - action_law_26_db
+  - action_law_27_db
+  - action_law_28_db
+  - action_law_29_db
+  - action_law_30_db
+  - action_law_31_db
+  - action_law_32_db
+  - action_law_33_db
+  - action_law_34_db
+  - action_law_35_db
+  - action_law_36_db
+  - action_law_37_db
+  - action_law_38_db
+  - action_law_39_db
+  - action_law_40_db
+  - action_law_41_db
+  - action_law_42_db
+  - action_law_43_db
+  - action_law_44_db
+  - action_law_45_db
+  - action_law_46_db
+  - action_law_47_db
+  - action_law_48_db
+  - action_law_49_db
+  - action_law_50_db
+#  - action_law_51_db
+#  - action_law_52_db
+#  - action_law_53_db
+#  - action_law_54_db
+#  - action_law_55_db
+#  - action_law_56_db
+#  - action_law_57_db
+#  - action_law_58_db
+#  - action_law_59_db
+#  - action_law_60_db
+#  - action_law_61_db
+#  - action_law_62_db
+#  - action_law_63_db
+#  - action_law_64_db
+#  - action_law_65_db
+#  - action_law_66_db
+#  - action_law_67_db
+#  - action_law_68_db
+#  - action_law_69_db
+#  - action_law_70_db
+#  - action_law_71_db
+#  - action_law_72_db
+#  - action_law_73_db
+#  - action_law_74_db
+#  - action_law_75_db
+#  - action_law_76_db
+#  - action_law_77_db
+#  - action_law_78_db
+#  - action_law_79_db
+#  - action_law_80_db
+#  - action_law_81_db
+#  - action_law_82_db
+#  - action_law_83_db
+#  - action_law_84_db
+#  - action_law_85_db
+#  - action_law_86_db
+#  - action_law_87_db
+#  - action_law_88_db
+#  - action_law_89_db
+#  - action_law_90_db
+#  - action_law_91_db
+#  - action_law_92_db
+#  - action_law_93_db
+#  - action_law_94_db
+#  - action_law_95_db
+#  - action_law_96_db
+#  - action_law_97_db
+#  - action_law_98_db
+#  - action_law_99_db
+#  - action_law_100_db
+  - action_tt_1_db
+  - action_tt_2_db
+  - action_tt_3_db
+  - action_tt_4_db
+  - action_tt_5_db
+  - action_tt_6_db
+  - action_tt_7_db
+  - action_tt_8_db
+  - action_tt_9_db
+  - action_tt_10_db
+  - action_tt_11_db
+  - action_tt_12_db
+  - action_tt_13_db
+  - action_tt_14_db
+  - action_tt_15_db
+  - action_tt_16_db
+  - action_tt_17_db
+  - action_tt_18_db
+  - action_tt_19_db
+  - action_tt_20_db
+  - action_tt_21_db
+  - action_tt_22_db
+  - action_tt_23_db
+  - action_tt_24_db
+  - action_tt_25_db
+  - action_tt_26_db
+  - action_tt_27_db
+  - action_tt_28_db
+  - action_tt_29_db
+  - action_tt_30_db
+  - action_tt_31_db
+  - action_tt_32_db
+  - action_tt_33_db
+  - action_tt_34_db
+  - action_tt_35_db
+  - action_tt_36_db
+  - action_tt_37_db
+  - action_tt_38_db
+  - action_tt_39_db
+  - action_tt_40_db
+  - action_tt_41_db
+  - action_tt_42_db
+  - action_tt_43_db
+  - action_tt_44_db
+  - action_tt_45_db
+  - action_tt_46_db
+  - action_tt_47_db
+  - action_tt_48_db
+  - action_tt_49_db
+  - action_tt_50_db

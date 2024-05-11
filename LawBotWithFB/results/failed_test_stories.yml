@@ -1,0 +1,32 @@
+version: "3.1"
+stories:
+- story: Chào rồi hỏi cách xưng hô (.\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_name  # predicted: give_name: [anh]{"entity": "cust_sex", "value": "Anh"} là [Đức](cust_name)
+  - action: utter_greet_with_name
+- story: Người dùng tự xưng hô đầu tiên rồi tạm biệt (.\tests\test_stories.yml)
+  steps:
+  - intent: give_name  # predicted: give_name: [Anh](cust_sex) [Tú](cust_name)
+  - action: utter_greet_with_name
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Người dùng tự xưng hô đầu tiên rồi hỏi toàn bộ chức năng (.\tests\test_stories.yml)
+  steps:
+  - intent: give_name  # predicted: give_name: [Anh](cust_sex) là [Văn Cao](cust_name)
+  - action: utter_greet_with_name
+  - intent: ask_func
+  - action: act_func
+  - intent: ask_article
+  - action: utter_ask_article
+  - intent: law_1
+  - action: action_law_10_db  # predicted: action_law_1_db
+  - intent: tt1
+  - action: action_tt_10_db  # predicted: action_tt_1_db
+  - intent: ask_guide
+  - action: act_guide  # predicted: action_unlikely_intent
+  - intent: ask_news
+  - action: act_news  # predicted: action_unlikely_intent
+  - intent: goodbye
+  - action: utter_goodbye

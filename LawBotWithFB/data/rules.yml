@@ -1,0 +1,15 @@
+version: "3.1"
+
+rules:
+
+- rule: Người dùng cung cấp tên và cách xung hô thì chào lại với thông tin đó
+  steps:
+  - intent: give_name
+  - action: utter_greet_with_name
+
+- rule: Chào tạm biệt người dùng khi họ nhắn tạm biết
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+

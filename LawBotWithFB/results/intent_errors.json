@@ -1,0 +1,34 @@
+[
+  {
+    "text": "thế nào là vô ý phạm tội",
+    "intent": "law_11",
+    "intent_prediction": {
+      "name": "law_10",
+      "confidence": 0.39490973949432373
+    }
+  },
+  {
+    "text": "nhiệm vụ, quyền hạn và trách nhiệm của Kiểm sát viên",
+    "intent": "tt42",
+    "intent_prediction": {
+      "name": "tt43",
+      "confidence": 0.23603709042072296
+    }
+  },
+  {
+    "text": "nhiệm vụ, quyền hạn và trách nhiệm của Hội thẩm",
+    "intent": "tt46",
+    "intent_prediction": {
+      "name": "tt48",
+      "confidence": 0.17870141565799713
+    }
+  },
+  {
+    "text": "nhiệm vụ, quyền hạn và trách nhiệm của Hội thẩm là gì",
+    "intent": "tt46",
+    "intent_prediction": {
+      "name": "tt48",
+      "confidence": 0.15871673822402954
+    }
+  }
+]

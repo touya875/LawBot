@@ -1,0 +1,662 @@
+version: "3.1"
+
+nlu:
+
+- intent: give_name
+  examples: |
+    - [Anh](cust_sex) là [Đức](cust_name)
+    - [Anh](cust_sex) là [Văn Cao](cust_name)
+    - [Anh](cust_sex) [Tú](cust_name)
+    - [Anh](cust_sex) là [Phan Gia Khánh](cust_name)
+    - [anh](cust_sex) là [Đức](cust_name)
+    - [anh](cust_sex) là [tú](cust_name)
+    - [anh](cust_sex) là [gia phúc](cust_name)
+    - [Chị](cust_sex) là [Hằng](cust_name)
+    - [Chị](cust_sex) là [huệ](cust_name)
+    - [Chị](cust_sex) là [Nguyễn Tố Nga](cust_name)
+    - [chị](cust_sex) là [Nguyễn Tố Nga](cust_name)
+    - [chị](cust_sex) [Lan](cust_name)
+    - [chị](cust_sex) là [ngọc](cust_name)
+    - [Em](cust_sex) là [Trang](cust_name)
+    - [Em](cust_sex) là [khánh linh](cust_name)
+    - [Em](cust_sex) là [hồ khánh linh](cust_name)
+    - [em](cust_sex) là [hồ khánh linh](cust_name)
+    - [em](cust_sex) là [khánh linh](cust_name)
+    - [Cô](cust_sex) [Linh](cust_name)
+    - [Cô](cust_sex) là [linh](cust_name)
+    - [cô](cust_sex) [nguyễn linh](cust_name)
+    - [cô](cust_sex) [Trần Ngọc Bích](cust_name)
+    - [cô](cust_sex) là [lâm tố phương](cust_name)
+    - [Chú](cust_sex) [Bảo](cust_name)
+    - [Chú](cust_sex) [lực](cust_name)
+    - [chú](cust_sex) [Lực](cust_name)
+    - [chú](cust_sex) [dũng](cust_name)
+    - [Chú](cust_sex) [Thế Lực](cust_name)
+    - [chú](cust_sex) [gia kỳ](cust_name)
+    - [Bác](cust_sex) [Chiến](cust_name)
+    - [bác](cust_sex) [Tài](cust_name)
+    - [bác](cust_sex) [Tú](cust_name)
+    - [bác](cust_sex) [thành](cust_name)
+
+- intent: greet
+  examples: |
+    - xin chào
+    - chào
+    - chào con
+    - chào cháu
+    - chào cậu
+    - chào nhé
+    - chào bạn
+    - xin chào
+    - hi
+    - hi cậu
+    - hello
+    - yo
+    - có ở đó không
+    - bắt đầu
+    - chào buổi sáng
+    - chào buổi trưa
+    - chào buổi chiều
+    - chào buổi tối
+
+- intent: goodbye
+  examples: |
+    - tạm biệt
+    - hẹn gặp lại
+    - gặp sau
+    - hết
+    - dừng
+    - dừng lại
+    - không
+    - stop
+    - xong rồi
+    - không cần
+    - hết
+    - bye
+    - cảm ơn nhiều
+    - cảm ơn
+
+- intent: ask_func
+  examples: |
+    - chức năng của bạn
+    - chức năng bot
+    - bot làm được gì
+    - chức năng
+
+- intent: ask_article
+  examples: |
+    - article
+    - hỏi luật
+    - tra cứu luật
+    - tra cứu
+    - hỏi đáp
+
+#- intent: ask_contact
+#  examples: |
+#    - liên lạc
+#    - liên hệ
+#    - contact
+#    - thông tin
+#    - cho tôi xin thông tin liên lạc
+#    - thông tin liên lạc
+    
+- intent: ask_news
+  examples: |
+    - tin tức
+    - news
+    - vụ án
+    - một vài vụ án
+    - cho tôi một số tin tức
+    - một số tin tức
+
+- intent: ask_guide
+  examples: |
+    - bạn học từ đâu
+    - bạn tham khảo từ đâu
+    - nguồn tham khảo
+    - bộ dữ liệu
+    - tài liệu tham khảo
+    - nguồn
+    - học ở đâu
+    - lấy từ đâu ra
+
+#- intent: advise_harm_people
+#  examples: |
+#    - trong trường hợp này thì nên làm gì để giảm nhẹ hình phạt cho Tội cố ý gây thương tích hoặc gây tổn hại cho sức khoẻ của người khác
+#    - giảm nhẹ hình phạt tội cố ý gây thương tích hoặc gây tổn hại cho sức khoẻ của người khác
+#    - việc nên làm khi cố ý gây thương tích hoặc gây tổn hại cho sức khoẻ của người khác để giảm nhẹ tội
+#    - nên làm gì trong tình huống gây tổn hại cho sức khoẻ của người khác để giảm nhẹ
+#    - cách miễn hình phạt từ tội cố ý gây thương tích hoặc gây tổn hại cho sức khoẻ của người khác
+#    - cách giảm phạt khi gây tổn hại cho sức khoẻ của người khác
+#    - lời khuyên khi tôi gây tổn hại cho sức khoẻ của người khác
+##86
+########################
+#####Bộ luật hình sự####
+
+- intent: law_1
+  examples: |
+    - nhiệm vụ của bộ luật hình sự
+    - nhiệm vụ bộ luật hình sự
+    - nhiệm vụ của bộ luật hình sự là gì
+    - bộ luật hình sự bảo vệ gì
+    - bộ luật qui định về gì
+    - khái quát về nhiệm vụ của bộ luật hình sự
+
+- intent: law_2
+  examples: |
+    - cơ sở của trách nhiệm hình sự là gì
+    - cơ sở của trách nhiệm hình sự
+    - cơ sở trách nhiệm hình sự
+    - cơ sở của trách nhiệm hình sự là điều mấy
+
+- intent: law_3
+  examples: |
+    - nguyên tắc xử lý trong bộ luật hình sự
+    - nguyên tắc xử lý
+    - nguyên tắc xử lý là điều mấy
+    - nguyên tắc xử lý bao gồm những gì
+
+- intent: law_4
+  examples: |
+    - điều 4 trong bộ luật hình sự
+    - trách nhiệm phòng ngừa và đấu tranh chống tội phạm
+    - trách nhiệm phòng ngừa và đấu tranh chống tội phạm là gì
+    - trách nhiệm phòng ngừa và đấu tranh chống tội phạm là điều mấy
+
+- intent: law_5
+  examples: |
+    - hiệu lực của Bộ luật hình sự đối với những hành vi phạm tội trên lãnh thổ nước Cộng hòa xã hội chủ nghĩa Việt Nam
+    - hiệu lực của Bộ luật hình sự đối với những hành vi phạm tội tại Việt Nam
+    - hiệu lực của Bộ luật hình sự đối với những hành vi phạm tội tại Việt Nam là điều mấy
+    - hiệu lực của bộ luật hình sự đối với những hành vi phạm tội trên lãnh thổ nước Việt Nam
+
+- intent: law_6
+  examples: |
+    - hiệu lực của Bộ luật hình sự đối với những hành vi phạm tội ở ngoài lãnh thổ nước Cộng hòa xã hội chủ nghĩa Việt Nam
+    - hiệu lực của Bộ luật hình sự đối với những hành vi phạm tội ở ngoài lãnh thổ nước Cộng hòa xã hội chủ nghĩa Việt Nam là điều bao nhiêu
+
+- intent: law_7
+  examples: |
+    - hiệu lực của Bộ luật hình sự về thời gian
+    - hiệu lực của Bộ luật hình sự về thời gian là điều mấy trong Bộ luật hình sự
+
+- intent: law_8
+  examples: |
+    - tội phạm là gì
+    - khái niệm tội phạm
+    - khái niệm tội phạm là điều mấy
+
+- intent: law_9
+  examples: |
+    - phân loại tội phạm là gì
+    - phân loại tội phạm 
+
+- intent: law_10
+  examples: |
+    - thế nào là cố ý phạm tội
+    - cố ý phạm tội
+
+- intent: law_11
+  examples: |
+    - thế nào là vô ý phạm tội
+    - trường hợp nào gọi là vô ý phạm tội
+
+- intent: law_12
+  examples: |
+    - tuổi chịu trách nhiệm hình sự
+    - bao nhiêu tuổi thì đủ tuổi chịu trách nhiệm hình sự
+
+- intent: law_13
+  examples: |
+    - phạm tội do dùng rượu, bia hoặc chất kích thích mạnh khác
+    - khi uống rượu, bia thì có chịu trách nhiệm hình sự khi phạm tội không
+
+- intent: law_14
+  examples: |
+    - chuẩn bị phạm tội là gì
+    - chuẩn bị phạm tội 
+
+- intent: law_15
+  examples: |
+    - phạm tội chưa đạt
+    - người phạm tội chưa đạt có phải chịu trách nhiệm hình sự hay không
+
+- intent: law_16
+  examples: |
+    - tự ý nửa chừng chấm dứt việc phạm tội
+    - tự ý nửa chừng chấm dứt việc phạm tội có phải chịu trách nhiệm hình sự hay không
+
+- intent: law_17
+  examples: |
+    - đồng phạm là gì
+    - điều mấy qui định về đồng phạm
+
+- intent: law_18
+  examples: |
+    - che giấu tội phạm
+    - che giấu tội phạm là điều mấy
+
+- intent: law_19
+  examples: |
+    - không tố giác tội phạm
+    - thế nào gọi là không tố giác tội phạm
+
+- intent: law_20
+  examples: |
+    - sự kiện bất ngờ là gì
+    - người thực hiện hành vi gây hậu quả nguy hại cho xã hội trong trường hợp không thể thấy trước hậu quả của hành vi đó, thì có phải chịu trách nhiệm hình sự không
+
+- intent: law_21
+  examples: |
+    - mắc bệnh tâm thần có phải chịu trách nhiệm hình sự hay không
+    - tình trạng không có năng lực trách nhiệm hình sự
+
+- intent: law_22
+  examples: |
+    - thế nào là phòng vệ chính đáng
+    - phòng vệ chính đáng được qui định tại điều mấy
+
+- intent: law_23
+  examples: |
+    - tình thế cấp thiết là gì
+    - hành vi gây thiệt hại trong tình thế cấp thiết có phải là tội phạm không
+
+- intent: law_24
+  examples: |
+    - gây thiệt hại trong khi bắt giữ người phạm tội là gì
+    - gây thiệt hại trong khi bắt giữ người phạm tội có phải chịu trách nhiệm hình sự hay không
+
+- intent: law_25
+  examples: |
+    - hành vi gây ra thiệt hại trong khi thực hiện việc nghiên cứu mặc dù đã tuân thủ đầy đủ biện pháp phòng ngừa thì có phải là tội phạm không
+    - rủi ro trong nghiên cứu, thử nghiệm, áp dụng tiến bộ khoa học, kỹ thuật và công nghệ
+
+- intent: law_26
+  examples: |
+    - người thực hiện hành vi gây thiệt hại trong khi thi hành mệnh lệnh của người chỉ huy hoặc của cấp trên trong lực lượng vũ trang nhân dân để thực hiện nhiệm vụ quốc phòng có phải chịu trách nhiệm hình sự hay không
+    - thi hành mệnh lệnh của người chỉ huy hoặc của cấp trên
+
+- intent: law_27
+  examples: |
+    - thời hiệu truy cứu trách nhiệm hình sự
+    - thời hiệu truy cứu trách nhiệm hình sự được qui định tại điều mấy
+
+- intent: law_28
+  examples: |
+    - không áp dụng thời hiệu truy cứu trách nhiệm hình sự là điều mấy
+    - các tội phạm nào không áp dụng thời hiệu truy cứu trách nhiệm hình sự
+
+- intent: law_29
+  examples: |
+    - căn cứ vào điều mấy để miễn trách nhiệm hình sự
+    - căn cứ miễn trách nhiệm hình sự
+
+- intent: law_30
+  examples: |
+    - hình phạt là gì
+    - khái niệm hình phạt thể hiện ở điều mấy
+
+- intent: law_31
+  examples: |
+    - mục đích của hình phạt nhằm làm gì
+    - mục đích của hình phạt thể hiện ở điều mấy
+
+- intent: law_32
+  examples: |
+    - các hình phạt đối với tội phạm
+    - các hình phạt đối với người phạm tội
+    - các hình phạt đối với người phạm tội bao gồm những gì
+
+- intent: law_33
+  examples: |
+    - các hình phạt đối với pháp nhân thương mại phạm tội
+    - các hình phạt đối với pháp nhân thương mại phạm tội thể hiện ở điều mấy
+
+- intent: law_34
+  examples: |
+    - cảnh cáo
+    - cảnh cáo là
+
+- intent: law_35
+  examples: |
+    - phạt tiền thể hiện ở điều mấy
+    - phạt tiền được áp dụng là hình phạt chính đối với các trường hợp nào
+
+- intent: law_36
+  examples: |
+    - cải tạo không giam giữ
+    - cải tạo không giam giữ thể hiện ở điều mấy
+
+- intent: law_37
+  examples: |
+    - trục xuất là gì
+    - thế nào là trục xuất
+
+- intent: law_38
+  examples: |
+    - tù có thời hạn
+    - tù có thời hạn với mức tối đa là bao nhiêu năm
+
+- intent: law_39
+  examples: |
+    - tù chung thân
+    - người dưới 18 tuổi phạm tội có bị tù chung thân không
+
+- intent: law_40
+  examples: |
+    - tử hình qui định tại điều mấy
+    - không áp dụng hình phạt tử hình đối với ai
+
+- intent: law_41
+  examples: |
+    - cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định
+    - cấm đảm nhiệm chức vụ, cấm hành nghề hoặc làm công việc nhất định được qui định tại điều mấy
+
+- intent: law_42
+  examples: |
+    - cấm cư trú
+    - thời hạn cấm cư trú là bao lâu
+
+- intent: law_43
+  examples: |
+    - quản chế là gì
+    - thời hạn quản chế là bao lâu
+
+- intent: law_44
+  examples: |
+    - tước một số quyền công dân
+    - trường hợp tước một số quyền công dân
+
+- intent: law_45
+  examples: |
+    - tịch thu tài sản qui định tại điều mấy
+    - tịch thu tài sản chỉ được áp dụng đối với đối tượng nào
+
+- intent: law_46
+  examples: |
+    - các biện pháp tư pháp
+    - biện pháp tư pháp bao gồm những gì
+
+- intent: law_47
+  examples: |
+    - tịch thu vật, tiền trực tiếp liên quan đến tội phạm được qui định tại điều mấy
+    - tịch thu vật, tiền trực tiếp liên quan đến tội phạm
+
+- intent: law_48
+  examples: |
+    - trả lại tài sản
+    - trả lại tài sản, sửa chữa hoặc bồi thường thiệt hại; buộc công khai xin lỗi qui định tại điều mấy
+
+- intent: law_49
+  examples: |
+    - Bắt buộc chữa bệnh
+    - Thời gian bắt buộc chữa bệnh liệu có được trừ vào thời hạn chấp hành hình phạt tù hay không
+
+- intent: law_50
+  examples: |
+    - căn cứ vào đâu để quyết định hình phạt
+    - căn cứ quyết định hình phạt là điều mấy
+##############################
+###Bộ luật tố tụng###
+- intent: tt1
+  examples: |
+    - phạm vi điều chỉnh
+    - phạm vi điều chỉnh là gì
+    - phạm vi điều chỉnh trong Bộ luật tố tụng hình sự
+    - nội dung phạm vi điều chỉnh
+    - phạm vi điều chỉnh trong Bộ luật tố tụng hình sự là điều mấy
+
+- intent: tt2
+  examples: |
+    - nhiệm vụ của Bộ luật tố tụng hình sự
+    - nhiệm vụ bộ luật tố tụng hình sự
+    - nhiệm vụ bộ luật tố tụng hình sự là điều mấy
+    - nhiệm vụ của Bộ luật tố tụng hình sự là gì
+
+- intent: tt3
+  examples: |
+    - hiệu lực của Bộ luật tố tụng hình sự
+    - hiệu lực Bộ luật tố tụng hình sự
+    - hiệu lực của Bộ luật tố tụng hình sự là điều mấy
+
+- intent: tt4
+  examples: |
+    - giải thích từ ngữ
+    - giải thích từ ngữ trong Bộ luật tố tụng hình sự
+    - giải thích từ ngữ trong Bộ luật tố tụng hình sự là điều mấy
+
+- intent: tt5
+  examples: |
+    - trách nhiệm của cơ quan nhà nước trong phòng, chống tội phạm
+    - trách nhiệm của tổ chức và cá nhân trong phòng, chống tội phạm
+    - trách nhiệm của cơ quan nhà nước, tổ chức và cá nhân trong đấu tranh phòng, chống tội phạm
+    - trách nhiệm của cơ quan nhà nước, tổ chức và cá nhân trong đấu tranh phòng, chống tội phạm bao gồm những gì
+    - trách nhiệm của cơ quan nhà nước, tổ chức và cá nhân trong đấu tranh phòng, chống tội phạm là điều mấy
+
+- intent: tt6
+  examples: |
+    - phát hiện và khắc phục nguyên nhân, điều kiện phạm tội
+    - phát hiện và khắc phục nguyên nhân, điều kiện phạm tội là trách nhiệm của ai
+
+- intent: tt7
+  examples: |
+    - bảo đảm pháp chế xã hội chủ nghĩa trong tố tụng hình sự
+    - bảo đảm pháp chế xã hội chủ nghĩa trong tố tụng hình sự là gì
+
+- intent: tt8
+  examples: |
+    - tôn trọng và bảo vệ quyền con người, quyền và lợi ích hợp pháp của cá nhân
+    - thế nào là tôn trọng và bảo vệ quyền con người, quyền và lợi ích hợp pháp của cá nhân
+
+- intent: tt9
+  examples: |
+    - bảo đảm quyền bình đẳng trước pháp luật
+    - bảo đảm quyền bình đẳng trước pháp luật là điều mấy
+
+- intent: tt10
+  examples: |
+    - bảo đảm quyền bất khả xâm phạm về thân thể
+    - bảo đảm quyền bất khả xâm phạm về thân thể là điều số mấy
+
+- intent: tt11
+  examples: |
+    - bảo hộ tính mạng, sức khoẻ, danh dự, nhân phẩm, tài sản của cá nhân; danh dự, uy tín, tài sản của pháp nhân
+    - bảo hộ tính mạng, sức khoẻ, danh dự, nhân phẩm, tài sản của cá nhân; danh dự, uy tín, tài sản của pháp nhân là điều mấy
+
+- intent: tt12
+  examples: |
+    - bảo đảm quyền bất khả xâm phạm về chỗ ở, đời sống riêng tư, bí mật cá nhân, bí mật gia đình, an toàn và bí mật thư tín, điện thoại, điện tín của cá nhân
+    - bảo đảm quyền bất khả xâm phạm về chỗ ở, đời sống riêng tư, bí mật cá nhân, bí mật gia đình, an toàn và bí mật thư tín, điện thoại, điện tín của cá nhân là điều mấy
+
+- intent: tt13
+  examples: |
+    - suy đoán vô tội là gì
+    - suy đoán vô tội là điều mấy
+
+- intent: tt14
+  examples: |
+    - không ai bị kết án hai lần vì một tội phạm
+    - không ai bị kết án hai lần vì một tội phạm là điều mấy
+    - một người có thể bị kết án hai lần vì một tội phạm không
+
+- intent: tt15
+  examples: |
+    - xác định sự thật của vụ án là điều mấy
+    - xác định sự thật của vụ án
+
+- intent: tt16
+  examples: |
+    - bảo đảm quyền bào chữa của người bị buộc tội, bảo vệ quyền và lợi ích hợp pháp của bị hại, đương sự
+    - bảo đảm quyền bào chữa của người bị buộc tội, bảo vệ quyền và lợi ích hợp pháp của bị hại, đương sự là điều mấy
+
+- intent: tt17
+  examples: |
+    - trách nhiệm của cơ quan, người có thẩm quyền tiến hành tố tụng
+    - trách nhiệm của cơ quan, người có thẩm quyền tiến hành tố tụng là gì
+
+- intent: tt18
+  examples: |
+    - trách nhiệm khởi tố và xử lý vụ án hình sự thuộc về ai
+    - trách nhiệm khởi tố và xử lý vụ án hình sự là gì
+
+- intent: tt19
+  examples: |
+    - tuân thủ pháp luật trong hoạt động điều tra
+    - thế nào là tuân thủ pháp luật trong hoạt động điều tra
+
+- intent: tt20
+  examples: |
+    - trách nhiệm thực hành quyền công tố và kiểm sát việc tuân theo pháp luật trong tố tụng hình sự
+    - trách nhiệm thực hành quyền công tố và kiểm sát việc tuân theo pháp luật trong tố tụng hình sự là điều số mấy
+
+- intent: tt21
+  examples: |
+    - bảo đảm sự vô tư của người có thẩm quyền tiến hành tố tụng, người tham gia tố tụng
+    - bảo đảm sự vô tư của người có thẩm quyền tiến hành tố tụng, người tham gia tố tụng là gì
+    - bảo đảm sự vô tư của người có thẩm quyền tiến hành tố tụng, người tham gia tố tụng là điều mấy
+
+- intent: tt22
+  examples: |
+    - thực hiện chế độ xét xử có Hội thẩm tham gia
+    - thực hiện chế độ xét xử có Hội thẩm tham gia là điều mấy
+
+- intent: tt23
+  examples: |
+    - thẩm phán, Hội thẩm xét xử độc lập và chỉ tuân theo pháp luật là thế nào
+    - thẩm phán, Hội thẩm xét xử độc lập và chỉ tuân theo pháp luật là điều mấy qui định
+
+- intent: tt24
+  examples: |
+    - tòa án xét xử tập thể
+    - tòa án xét xử tập thể là như thế nào
+    - tòa án xét xử tập thể là điều mấy
+
+- intent: tt25
+  examples: |
+    - tòa án xét xử kịp thời, công bằng, công khai
+    - tòa án xét xử kịp thời, công bằng, công khai là điều mấy
+
+- intent: tt26
+  examples: |
+    - Điều mấy qui định tranh tụng trong xét xử được bảo đảm
+    - Tranh tụng trong xét xử được bảo đảm
+
+- intent: tt27
+  examples: |
+    - chế độ xét xử sơ thẩm, phúc thẩm được bảo đảm
+    - chế độ xét xử sơ thẩm, phúc thẩm được bảo đảm là gì
+
+- intent: tt28
+  examples: |
+    - bảo đảm hiệu lực của bản án, quyết định của Tòa án
+    - bảo đảm hiệu lực của bản án, quyết định của Tòa án là điều mấy
+
+- intent: tt29
+  examples: |
+    - tiếng nói và chữ viết dùng trong tố tụng hình sự
+    - tiếng nói và chữ viết dùng trong tố tụng hình sự là ngôn ngữ gì
+
+- intent: tt30
+  examples: |
+    - giải quyết vấn đề dân sự trong vụ án hình sự
+    - giải quyết vấn đề dân sự trong vụ án hình sự là điều số mấy
+
+- intent: tt31
+  examples: |
+    - bảo đảm quyền được bồi thường của người bị thiệt hại trong hoạt động tố tụng hình sự
+    - bảo đảm quyền được bồi thường của người bị thiệt hại trong hoạt động tố tụng hình sự là điều mấy
+
+- intent: tt32
+  examples: |
+    - bảo đảm quyền khiếu nại, tố cáo trong tố tụng hình sự
+    - bảo đảm quyền khiếu nại, tố cáo trong tố tụng hình sự là điều mấy
+
+- intent: tt33
+  examples: |
+    - kiểm tra, giám sát trong tố tụng hình sự
+    - kiểm tra, giám sát trong tố tụng hình sự là điều mấy
+
+- intent: tt34
+  examples: |
+    - cơ quan tiến hành tố tụng và người tiến hành tố tụng
+    - cơ quan tiến hành tố tụng và người tiến hành tố tụng là điều mấy
+
+- intent: tt35
+  examples: |
+    - cơ quan và người được giao nhiệm vụ tiến hành một số hoạt động điều tra
+    - cơ quan và người được giao nhiệm vụ tiến hành một số hoạt động điều tra bao gồm những ai
+
+- intent: tt36
+  examples: |
+    - nhiệm vụ, quyền hạn và trách nhiệm của Thủ trưởng, Phó Thủ trưởng Cơ quan điều tra
+    - nhiệm vụ, quyền hạn và trách nhiệm của Thủ trưởng, Phó Thủ trưởng Cơ quan điều tra là gì
+
+- intent: tt37
+  examples: |
+    - nhiệm vụ, quyền hạn và trách nhiệm của Điều tra viên
+    - nhiệm vụ, quyền hạn và trách nhiệm của Điều tra viên là gì
+
+- intent: tt38
+  examples: |
+    - nhiệm vụ, quyền hạn và trách nhiệm của Cán bộ điều tra của Cơ quan điều tra
+    - nhiệm vụ, quyền hạn và trách nhiệm của Cán bộ điều tra của Cơ quan điều tra là gì
+
+- intent: tt39
+  examples: |
+    - nhiệm vụ, quyền hạn và trách nhiệm của cấp trưởng, cấp phó, cán bộ điều tra của các cơ quan của Bộ đội biên phòng, Hải quan, Kiểm lâm, lực lượng Cảnh sát biển, Kiểm ngư được giao nhiệm vụ tiến hành một số hoạt động điều tra
+    - nhiệm vụ, quyền hạn và trách nhiệm của cấp trưởng, cấp phó, cán bộ điều tra của các cơ quan của Bộ đội biên phòng, Hải quan, Kiểm lâm, lực lượng Cảnh sát biển, Kiểm ngư được giao nhiệm vụ tiến hành một số hoạt động điều tra là điều mấy
+
+- intent: tt40
+  examples: |
+    - nhiệm vụ, quyền hạn và trách nhiệm của cấp trưởng, cấp phó, cán bộ điều tra của các cơ quan khác của Công an nhân dân, Quân đội nhân dân được giao nhiệm vụ tiến hành một số hoạt động điều tra
+    - nhiệm vụ, quyền hạn và trách nhiệm của cấp trưởng, cấp phó, cán bộ điều tra của các cơ quan khác của Công an nhân dân, Quân đội nhân dân được giao nhiệm vụ tiến hành một số hoạt động điều tra là điều số mấy
+    
+- intent: tt41
+  examples: |
+    - nhiệm vụ, quyền hạn và trách nhiệm của Viện trưởng, Phó Viện trưởng Viện kiểm sát
+    - nhiệm vụ, quyền hạn và trách nhiệm của Viện trưởng, Phó Viện trưởng Viện kiểm sát là gì
+
+- intent: tt42
+  examples: |
+    - nhiệm vụ, quyền hạn và trách nhiệm của Kiểm sát viên
+    - nhiệm vụ, quyền hạn và trách nhiệm của Kiểm sát viên là điều mấy
+
+- intent: tt43
+  examples: |
+    - nhiệm vụ, quyền hạn và trách nhiệm của Kiểm tra viên
+    - nhiệm vụ, quyền hạn và trách nhiệm của Kiểm tra viên là điều mấy
+
+- intent: tt44
+  examples: |
+    - nhiệm vụ, quyền hạn và trách nhiệm của Chánh án, Phó Chánh án Tòa án
+    - nhiệm vụ, quyền hạn và trách nhiệm của Chánh án, Phó Chánh án Tòa án là điều mấy
+
+- intent: tt45
+  examples: |
+    - nhiệm vụ, quyền hạn và trách nhiệm của Thẩm phán
+    - nhiệm vụ, quyền hạn và trách nhiệm của Thẩm phán là gì
+
+- intent: tt46
+  examples: |
+    - nhiệm vụ, quyền hạn và trách nhiệm của Hội thẩm
+    - nhiệm vụ, quyền hạn và trách nhiệm của Hội thẩm là gì
+
+- intent: tt47
+  examples: |
+    - nhiệm vụ, quyền hạn và trách nhiệm của Thư ký Tòa án
+    - nhiệm vụ, quyền hạn và trách nhiệm của Thư ký Tòa án là gì
+
+- intent: tt48
+  examples: |
+    - nhiệm vụ, quyền hạn và trách nhiệm của Thẩm tra viên
+    - nhiệm vụ, quyền hạn và trách nhiệm của Thẩm tra viên là gì
+
+- intent: tt49
+  examples: |
+    - các trường hợp phải từ chối hoặc thay đổi người có thẩm quyền tiến hành tố tụng
+    - các trường hợp phải từ chối hoặc thay đổi người có thẩm quyền tiến hành tố tụng là điều mấy
+
+- intent: tt50
+  examples: |
+    - người có quyền đề nghị thay đổi người có thẩm quyền tiến hành tố tụng
+    - người có quyền đề nghị thay đổi người có thẩm quyền tiến hành tố tụng là ai
